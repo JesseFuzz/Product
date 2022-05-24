@@ -92,3 +92,60 @@ Contains: Missing org.webjars:swagger-ui:jar:sources:4.10.3
 !MESSAGE Could not resolve artifact org.webjars:swagger-ui:jar:sources:4.10.3
 !SUBENTRY 2 org.eclipse.m2e.core 4 -1 2022-05-23 20:22:32.494
 !MESSAGE Missing org.webjars:swagger-ui:jar:sources:4.10.3
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-23 21:10:20.799
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-23 21:10:20.800
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@3a308479[org.springframework.tooling.boot.ls:1.33.0.202204250653(id=569)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-23 21:10:20.810
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-23 21:10:20.958
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-23 21:10:26.194
+!MESSAGE Boot LS startup time from start to initialized: 5376ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-23 21:10:26.336
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.LCsDgnLyisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-23 21:10:26.339
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-23 21:10:26.341
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-23 21:10:26.341
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-23 21:10:26.342
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-23 21:10:26.342
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.LCsDgnLy => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-23 21:10:26.349
+!MESSAGE classpath=105 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-23 21:10:26.353
+!MESSAGE buffering callback sts4.classpath.LCsDgnLy product false 105
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-23 21:10:26.354
+!MESSAGE executing callback sts4.classpath.LCsDgnLy 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-23 21:10:26.737
+!MESSAGE executing callback sts4.classpath.LCsDgnLy SUCCESS [done]
+
+!ENTRY org.eclipse.lsp4e 2 0 2022-05-23 22:53:17.772
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)

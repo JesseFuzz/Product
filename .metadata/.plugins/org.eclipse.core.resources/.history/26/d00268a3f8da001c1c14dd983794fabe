@@ -1,0 +1,33 @@
+package entity;
+
+import java.time.OffsetDateTime;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table
+public class ProductEntity {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Long id;
+	
+	private String name;
+	
+	private ProductTypeEnumDTO type=ProductTypeEnumDTO.P;
+	
+	private String identifier;
+	
+	private String reference;
+	
+	private String identifierType;
+	
+	private Boolean own = Boolean.FALSE;
+	
+	private OffsetDateTime dateCreated = OffsetDateTime.now();
+	
+}
