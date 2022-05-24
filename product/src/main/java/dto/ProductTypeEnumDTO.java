@@ -27,6 +27,6 @@ public enum ProductTypeEnumDTO {
 			}
 		}
 		throw new IllegalArgumentException(value);
-	}
+	}	
 	
 }

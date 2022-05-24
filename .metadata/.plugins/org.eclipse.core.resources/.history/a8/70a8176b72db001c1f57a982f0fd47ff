@@ -1,0 +1,51 @@
+package entity;
+
+import java.time.OffsetDateTime;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import dto.ProductTypeEnumDTO;
+import lombok.Getter;
+import lombok.Setter;
+
+@Entity
+@Table
+@Getter
+@Setter
+public class ProductEntity {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="prd_id")
+	private Long id;
+	
+	@Column(name="prd_name", nullable=false)
+	private String name;
+	
+	@Enumerated(EnumType.STRING)
+	@Column(name="prd_id", length=1, nullable=false)
+	private ProductTypeEnumDTO type=ProductTypeEnumDTO.P;
+	
+	@Column(name="prd_identifier")
+	private String identifier;
+	
+	@Column(name="prd_reference")
+	private String reference;
+	
+	@Column(name="prd_identifier_type")
+	private String identifierType;
+	
+	@Column(name="prd_own")
+	private Boolean own = Boolean.FALSE;
+	
+	@Column(name="prd_date_created")
+	private OffsetDateTime dateCreated = OffsetDateTime.now();
+	
+}

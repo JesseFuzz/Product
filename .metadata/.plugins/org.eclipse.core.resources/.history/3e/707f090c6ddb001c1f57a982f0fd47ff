@@ -1,0 +1,64 @@
+package controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
+
+import entity.ProductEntity;
+import repository.ProductRepository;
+
+@RestController
+@RequestMapping("/products")
+public class ProductController {
+	
+	@Autowired
+	ProductEntity productEntity;
+	
+	@Autowired
+	ProductRepository productRepository;
+	
+    @GetMapping("/teste")
+    public String teste(){
+        return new String("5 * 10 é: " + 5*10 + " :)");
+    }
+	
+	@PostMapping
+	public ProductEntity saveProduct() {
+		return productRepository.save(productEntity);
+	}
+	
+	@GetMapping("{id}")
+	public Optional<ProductEntity> getProduct(@PathVariable Long id) {
+		BeanUtils.copyProperties()
+		return  productRepository
+				.findById(id)
+				.orElseThrow(
+						() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+		
+	}
+	
+	@DeleteMapping
+	public void deleteProduct() {
+		
+	}
+	
+	@PutMapping
+	public ResponseEntity<ProductEntity> updateProduct() {
+		return null;
+		
+	}
+
+}
